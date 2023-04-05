@@ -42,6 +42,12 @@ concatName(capitaoMeuCapitao);
 
 // Desafio 4 - Crie a função footballPoints
 
+const footballPoints = (wins, ties) => {
+  return ((wins * 3) + (ties * 1))
+}
+
+footballPoints(14, 8);
+
 // Desafio 5 - Crie a função highestCount
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
