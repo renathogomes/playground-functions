@@ -90,8 +90,8 @@ const calcRectangleArea = (base, height) => {
 const calcAllAreas = (base, height, form) => {
   if (form === 'triângulo') {
     return `O valor da área do triângulo é de: ${calcTriangleArea(base, height)}`
-  } else if (form === 'retângulo'){
-  return `O valor da área do retângulo é de: ${calcRectangleArea(base, height)}`
+  } else if (form === 'retângulo') {
+    return `O valor da área do retângulo é de: ${calcRectangleArea(base, height)}`
   } else {
     return `Não foi possível fazer o cálculo, insira uma forma geométrica válida`
   }
@@ -99,6 +99,33 @@ const calcAllAreas = (base, height, form) => {
 
 
 // Desafio 7 - Crie a função catAndMouse
+
+const catAndMouse = (mouse, cat1, cat2) => {
+  let distanciaCat1 = (mouse - cat1);
+  let distanciaCat2 = (mouse - cat2) ;
+
+  if (distanciaCat1 < 0){
+    distanciaCat1 = distanciaCat1 * (-1);
+  }
+  if (distanciaCat2 < 0) {
+    distanciaCat2 = distanciaCat2 * (-1);
+  }
+
+
+  if (distanciaCat1 < distanciaCat2) {
+    return 'cat1';
+  }
+  if (distanciaCat2 < distanciaCat1) {
+    return 'cat2';
+  }
+  if(distanciaCat1 === distanciaCat2) {
+    return 'os gatos trombam e o rato foge'
+  }
+}
+
+console.log(catAndMouse(1, 0, 2))
+
+
 
 // Desafio 8 - Crie a função fizzBuzz
 
