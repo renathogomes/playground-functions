@@ -17,7 +17,7 @@ const splitSentence = (sentence) => {
 
 splitSentence('Go Trybe!');
 
-// Desafio 3 - Crie a função concatName
+//! Desafio 3 - Crie a função concatName
 
 const listaDeNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 const temRe = ['foguete', 'não', 'tem', 'ré'];
