@@ -48,7 +48,36 @@ const footballPoints = (wins, ties) => {
 
 footballPoints(14, 8);
 
-// Desafio 5 - Crie a função highestCount
+//! Desafio 5 - Crie a função highestCount
+
+const dados = [9, 1, 2, 3, 9, 5, 7];
+
+const verificaMaiorNumero = (algumArray) => {
+  let armazena = 0;
+  for (let index = 0; index < algumArray.length; index += 1)
+    if (armazena < algumArray[index]) {
+      armazena = algumArray[index]
+    }
+  return armazena
+}
+
+const arrayDoMaior = (algumArray) => {
+  let arrayDosIndices = [];
+
+  let valor = verificaMaiorNumero(algumArray);
+
+  let index = algumArray.indexOf(valor)
+
+  while (index != -1) {
+    arrayDosIndices.push(index)
+    index = algumArray.indexOf(valor, index + 1)
+  }
+  return arrayDosIndices
+}
+
+const highestCount = (algumaCoisaLa) => {
+return arrayDoMaior(algumaCoisaLa).length;
+}
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 
