@@ -7,10 +7,15 @@ const elefante = 6;
 const macaco = null;
 
 compareTrue(girafa, elefante);
-compareTrue(macaco, elefante)
-
+compareTrue(macaco, elefante);
 
 // Desafio 2 - Crie a função splitSentence
+
+const splitSentence = (sentence) => {
+  return sentence.split(' ')
+};
+
+splitSentence('Go Trybe!');
 
 // Desafio 3 - Crie a função concatName
 
@@ -30,17 +35,17 @@ compareTrue(macaco, elefante)
 
 // Não modifique essas linhas
 module.exports = {
-  calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => {}),
-  calcRectangleArea: typeof calcRectangleArea === 'function' ? calcRectangleArea : (() => {}),
-  calcAllAreas: typeof calcAllAreas === 'function' ? calcAllAreas : (() => {}),
-  catAndMouse: typeof catAndMouse === 'function' ? catAndMouse : (() => {}),
-  compareTrue: typeof compareTrue === 'function' ? compareTrue : (() => {}),
-  concatName: typeof concatName === 'function' ? concatName : (() => {}),
-  decode: typeof decode === 'function' ? decode : (() => {}),
-  encode: typeof encode === 'function' ? encode : (() => {}),
-  fizzBuzz: typeof fizzBuzz === 'function' ? fizzBuzz : (() => {}),
-  footballPoints: typeof footballPoints === 'function' ? footballPoints : (() => {}),
-  highestCount: typeof highestCount === 'function' ? highestCount : (() => {}),
-  splitSentence: typeof splitSentence === 'function' ? splitSentence : (() => {}),
-  techList: typeof techList === 'function' ? techList : (() => {}),
+  calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => { }),
+  calcRectangleArea: typeof calcRectangleArea === 'function' ? calcRectangleArea : (() => { }),
+  calcAllAreas: typeof calcAllAreas === 'function' ? calcAllAreas : (() => { }),
+  catAndMouse: typeof catAndMouse === 'function' ? catAndMouse : (() => { }),
+  compareTrue: typeof compareTrue === 'function' ? compareTrue : (() => { }),
+  concatName: typeof concatName === 'function' ? concatName : (() => { }),
+  decode: typeof decode === 'function' ? decode : (() => { }),
+  encode: typeof encode === 'function' ? encode : (() => { }),
+  fizzBuzz: typeof fizzBuzz === 'function' ? fizzBuzz : (() => { }),
+  footballPoints: typeof footballPoints === 'function' ? footballPoints : (() => { }),
+  highestCount: typeof highestCount === 'function' ? highestCount : (() => { }),
+  splitSentence: typeof splitSentence === 'function' ? splitSentence : (() => { }),
+  techList: typeof techList === 'function' ? techList : (() => { }),
 };
