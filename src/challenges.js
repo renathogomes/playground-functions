@@ -1,6 +1,6 @@
 // Desafio 1 - Crie a função compareTrue
 
-const compareTrue = (parametro1, parametro2) => (parametro1 && parametro2) ? true : false;
+const compareTrue = (parametro1, parametro2) => parametro1 && parametro2 ? true : false;
 
 const girafa = 3;
 const elefante = 6;
@@ -18,6 +18,27 @@ const splitSentence = (sentence) => {
 splitSentence('Go Trybe!');
 
 // Desafio 3 - Crie a função concatName
+
+const listaDeNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+const temRe = ['foguete', 'não', 'tem', 'ré'];
+const capitaoMeuCapitao = ['captain', 'my', 'captain']
+
+const selecionaNomeInicial = (qualquercoisa) => {
+  return qualquercoisa[0];
+}
+
+const selecionaNomeFinal = (qualquercoisa2) => {
+  return qualquercoisa2[qualquercoisa2.length - 1]
+}
+
+const concatName = (nome) => {
+  return `${selecionaNomeInicial(nome)}, ${selecionaNomeFinal(nome)}`
+}
+
+concatName(listaDeNomes);
+concatName(temRe);
+concatName(capitaoMeuCapitao);
+
 
 // Desafio 4 - Crie a função footballPoints
 
