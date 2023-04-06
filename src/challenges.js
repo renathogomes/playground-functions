@@ -8,27 +8,15 @@ const splitSentence = (sentence) => {
   return sentence.split(' ');
 };
 
-//! Desafio 3 - Crie a função concatName
+//? Desafio 3 - Crie a função concatName
 
-const listaDeNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-const temRe = ['foguete', 'não', 'tem', 'ré'];
-const capitaoMeuCapitao = ['captain', 'my', 'captain'];
+const concatName = (parametro) => {
 
-const selecionaNomeInicial = (qualquercoisa) => {
-  return qualquercoisa[0];
+  let primeiroNome = [...parametro].shift();
+  let ultimoNome = [...parametro].pop();
+
+  return `${ultimoNome}, ${primeiroNome}`;
 }
-
-const selecionaNomeFinal = (qualquercoisa2) => {
-  return qualquercoisa2[qualquercoisa2.length - 1];
-}
-
-const concatName = (nome) => {
-  return `${selecionaNomeInicial(nome)}, ${selecionaNomeFinal(nome)}`;
-}
-
-concatName(listaDeNomes);
-concatName(temRe);
-concatName(capitaoMeuCapitao);
 
 //? Desafio 4 - Crie a função footballPoints
 
@@ -95,14 +83,14 @@ const catAndMouse = (mouse, cat1, cat2) => {
 
 const fizzBuzz = (parametro) => {
   let arraymodificado = [];
-  for (let index = 0; index < parametro.length; index += 1){
-    if ((parametro[index] % 3 === 0) && parametro[index] % 5 !== 0){
-     parametro[index] = 'fizz';
-     arraymodificado.push(parametro[index])
-    } else if ((parametro[index] % 5 === 0) && parametro[index] % 3 !== 0){
+  for (let index = 0; index < parametro.length; index += 1) {
+    if ((parametro[index] % 3 === 0) && parametro[index] % 5 !== 0) {
+      parametro[index] = 'fizz';
+      arraymodificado.push(parametro[index])
+    } else if ((parametro[index] % 5 === 0) && parametro[index] % 3 !== 0) {
       parametro[index] = 'buzz';
-     arraymodificado.push(parametro[index])
-    } else if ((parametro[index] % 3 === 0) && (parametro[index] % 5 === 0)){ 
+      arraymodificado.push(parametro[index])
+    } else if ((parametro[index] % 3 === 0) && (parametro[index] % 5 === 0)) {
       parametro[index] = 'fizzBuzz';
       arraymodificado.push(parametro[index]);
     } else {
@@ -113,9 +101,40 @@ const fizzBuzz = (parametro) => {
   return arraymodificado;
 }
 
-// Desafio 9 - Crie a função encode e a função decode
+//! Desafio 9 - Crie a função encode e a função decode
+
+const encode = (string) => {
+  let arrayString = [string.split('')];
+  let stringFinal = [string]
+  for (let i = 0; i < arrayString.length; i += 1) {
+    if(arrayString[i] === 'a'){
+      arrayString[i] = '1';
+      /* stringFinal.push(arrayString[i]); */
+    }
+    if(arrayString[i] === 'e'){
+      arrayString[i] = '2';
+      /* stringFinal.push(arrayString[i]); */
+    }
+    if(arrayString[i] === 'i'){
+      arrayString[i] = '3';
+      /* stringFinal.push(arrayString[i]); */
+    }
+    if(arrayString[i] === 'o'){
+      arrayString[i] = '4';
+      /* stringFinal.push(arrayString[i]); */
+    }
+    if(arrayString[i] === 'u'){
+      arrayString[i] = '5';
+    /*   stringFinal.push(arrayString[i]); */
+    }
+  }
+  return arrayString
+}
+console.log(encode('eu sei que vai dar errado'))
 
 // Desafio 10 - Crie a função techList
+
+
 
 // Não modifique essas linhas
 
