@@ -39,7 +39,6 @@ concatName(listaDeNomes);
 concatName(temRe);
 concatName(capitaoMeuCapitao);
 
-
 // Desafio 4 - Crie a função footballPoints
 
 const footballPoints = (wins, ties) => {
@@ -48,36 +47,29 @@ const footballPoints = (wins, ties) => {
 
 footballPoints(14, 8);
 
-//! Desafio 5 - Crie a função highestCount
+// Desafio 5 - Crie a função highestCount
 
-const dados = [9, 1, 2, 3, 9, 5, 7];
+const dados = [-2, -2, -1];
 
-const verificaMaiorNumero = (algumArray) => {
-  let armazena = 0;
-  for (let index = 0; index < algumArray.length; index += 1)
-    if (armazena < algumArray[index]) {
-      armazena = algumArray[index]
+const highestCount = (parametro) => {
+  let maiorNumero = Math.max(...parametro);
+  let contaIndex = 0;
+  for (let i = 0; i < parametro.length; i += 1) {
+    if (parametro[i] === maiorNumero) {
+      contaIndex += 1
     }
-  return armazena
-}
-
-const arrayDoMaior = (algumArray) => {
-  let arrayDosIndices = [];
-
-  let valor = verificaMaiorNumero(algumArray);
-
-  let index = algumArray.indexOf(valor)
-
-  while (index != -1) {
-    arrayDosIndices.push(index)
-    index = algumArray.indexOf(valor, index + 1)
   }
-  return arrayDosIndices
+
+  /*   let contaIndex = 0;
+    for (let index = 0; index < parametro.length; index += 1);
+    if(maiorNumero === parametro[index]) {
+      contaIndex = parametro[index]
+    } */
+
+  return contaIndex
 }
 
-const highestCount = (algumaCoisaLa) => {
-  return arrayDoMaior(algumaCoisaLa).length;
-}
+console.log(highestCount(dados))
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 
@@ -97,14 +89,13 @@ const calcAllAreas = (base, height, form) => {
   }
 }
 
-
 // Desafio 7 - Crie a função catAndMouse
 
 const catAndMouse = (mouse, cat1, cat2) => {
   let distanciaCat1 = (mouse - cat1);
-  let distanciaCat2 = (mouse - cat2) ;
+  let distanciaCat2 = (mouse - cat2);
 
-  if (distanciaCat1 < 0){
+  if (distanciaCat1 < 0) {
     distanciaCat1 = distanciaCat1 * (-1);
   }
   if (distanciaCat2 < 0) {
@@ -118,14 +109,12 @@ const catAndMouse = (mouse, cat1, cat2) => {
   if (distanciaCat2 < distanciaCat1) {
     return 'cat2';
   }
-  if(distanciaCat1 === distanciaCat2) {
+  if (distanciaCat1 === distanciaCat2) {
     return 'os gatos trombam e o rato foge'
   }
 }
 
 console.log(catAndMouse(1, 0, 2))
-
-
 
 // Desafio 8 - Crie a função fizzBuzz
 
@@ -134,6 +123,7 @@ console.log(catAndMouse(1, 0, 2))
 // Desafio 10 - Crie a função techList
 
 // Não modifique essas linhas
+
 module.exports = {
   calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => { }),
   calcRectangleArea: typeof calcRectangleArea === 'function' ? calcRectangleArea : (() => { }),
