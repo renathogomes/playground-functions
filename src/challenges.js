@@ -12,7 +12,7 @@ compareTrue(macaco, elefante);
 // Desafio 2 - Crie a função splitSentence
 
 const splitSentence = (sentence) => {
-  return sentence.split(' ')
+  return sentence.split(' ');
 };
 
 splitSentence('Go Trybe!');
@@ -21,18 +21,18 @@ splitSentence('Go Trybe!');
 
 const listaDeNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 const temRe = ['foguete', 'não', 'tem', 'ré'];
-const capitaoMeuCapitao = ['captain', 'my', 'captain']
+const capitaoMeuCapitao = ['captain', 'my', 'captain'];
 
 const selecionaNomeInicial = (qualquercoisa) => {
   return qualquercoisa[0];
 }
 
 const selecionaNomeFinal = (qualquercoisa2) => {
-  return qualquercoisa2[qualquercoisa2.length - 1]
+  return qualquercoisa2[qualquercoisa2.length - 1];
 }
 
 const concatName = (nome) => {
-  return `${selecionaNomeInicial(nome)}, ${selecionaNomeFinal(nome)}`
+  return `${selecionaNomeInicial(nome)}, ${selecionaNomeFinal(nome)}`;
 }
 
 concatName(listaDeNomes);
@@ -42,7 +42,7 @@ concatName(capitaoMeuCapitao);
 // Desafio 4 - Crie a função footballPoints
 
 const footballPoints = (wins, ties) => {
-  return ((wins * 3) + (ties * 1))
+  return ((wins * 3) + (ties * 1));
 }
 
 footballPoints(14, 8);
@@ -56,20 +56,13 @@ const highestCount = (parametro) => {
   let contaIndex = 0;
   for (let i = 0; i < parametro.length; i += 1) {
     if (parametro[i] === maiorNumero) {
-      contaIndex += 1
+      contaIndex += 1;
     }
   }
-
-  /*   let contaIndex = 0;
-    for (let index = 0; index < parametro.length; index += 1);
-    if(maiorNumero === parametro[index]) {
-      contaIndex = parametro[index]
-    } */
-
-  return contaIndex
+  return contaIndex;
 }
 
-console.log(highestCount(dados))
+console.log(highestCount(dados));
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 
@@ -81,11 +74,11 @@ const calcRectangleArea = (base, height) => {
 }
 const calcAllAreas = (base, height, form) => {
   if (form === 'triângulo') {
-    return `O valor da área do triângulo é de: ${calcTriangleArea(base, height)}`
+    return `O valor da área do triângulo é de: ${calcTriangleArea(base, height)}`;
   } else if (form === 'retângulo') {
-    return `O valor da área do retângulo é de: ${calcRectangleArea(base, height)}`
+    return `O valor da área do retângulo é de: ${calcRectangleArea(base, height)}`;
   } else {
-    return `Não foi possível fazer o cálculo, insira uma forma geométrica válida`
+    return `Não foi possível fazer o cálculo, insira uma forma geométrica válida`;
   }
 }
 
@@ -110,13 +103,36 @@ const catAndMouse = (mouse, cat1, cat2) => {
     return 'cat2';
   }
   if (distanciaCat1 === distanciaCat2) {
-    return 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
   }
 }
 
-console.log(catAndMouse(1, 0, 2))
+console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8 - Crie a função fizzBuzz
+
+let numerosDoArray = [9, 25];
+
+const fizzBuzz = (parametro) => {
+  let arraymodificado = [];
+  for (let index = 0; index < parametro.length; index += 1){
+    if ((parametro[index] % 3 === 0) && parametro[index] % 5 !== 0){
+     parametro[index] = 'fizz';
+     arraymodificado.push(parametro[index])
+    } else if ((parametro[index] % 5 === 0) && parametro[index] % 3 !== 0){
+      parametro[index] = 'buzz';
+     arraymodificado.push(parametro[index])
+    } else if ((parametro[index] % 3 === 0) && (parametro[index] % 5 === 0)){ 
+      parametro[index] = 'fizzBuzz';
+      arraymodificado.push(parametro[index]);
+    } else {
+      parametro[index] = 'bug!';
+      arraymodificado.push(parametro[index]);
+    }
+  }
+  return arraymodificado;
+}
+console.log(fizzBuzz(numerosDoArray))
 
 // Desafio 9 - Crie a função encode e a função decode
 
