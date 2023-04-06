@@ -1,21 +1,12 @@
-// Desafio 1 - Crie a função compareTrue
+//? Desafio 1 - Crie a função compareTrue
 
 const compareTrue = (parametro1, parametro2) => parametro1 && parametro2 ? true : false;
 
-const girafa = 3;
-const elefante = 6;
-const macaco = null;
-
-compareTrue(girafa, elefante);
-compareTrue(macaco, elefante);
-
-// Desafio 2 - Crie a função splitSentence
+//? Desafio 2 - Crie a função splitSentence
 
 const splitSentence = (sentence) => {
   return sentence.split(' ');
 };
-
-splitSentence('Go Trybe!');
 
 //! Desafio 3 - Crie a função concatName
 
@@ -39,17 +30,13 @@ concatName(listaDeNomes);
 concatName(temRe);
 concatName(capitaoMeuCapitao);
 
-// Desafio 4 - Crie a função footballPoints
+//? Desafio 4 - Crie a função footballPoints
 
 const footballPoints = (wins, ties) => {
   return ((wins * 3) + (ties * 1));
 }
 
-footballPoints(14, 8);
-
-// Desafio 5 - Crie a função highestCount
-
-const dados = [-2, -2, -1];
+//? Desafio 5 - Crie a função highestCount
 
 const highestCount = (parametro) => {
   let maiorNumero = Math.max(...parametro);
@@ -62,9 +49,7 @@ const highestCount = (parametro) => {
   return contaIndex;
 }
 
-console.log(highestCount(dados));
-
-// Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
+//? Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 
 const calcTriangleArea = (base, height) => {
   return (base * height) / 2;
@@ -82,7 +67,7 @@ const calcAllAreas = (base, height, form) => {
   }
 }
 
-// Desafio 7 - Crie a função catAndMouse
+//? Desafio 7 - Crie a função catAndMouse
 
 const catAndMouse = (mouse, cat1, cat2) => {
   let distanciaCat1 = (mouse - cat1);
@@ -95,7 +80,6 @@ const catAndMouse = (mouse, cat1, cat2) => {
     distanciaCat2 = distanciaCat2 * (-1);
   }
 
-
   if (distanciaCat1 < distanciaCat2) {
     return 'cat1';
   }
@@ -107,11 +91,7 @@ const catAndMouse = (mouse, cat1, cat2) => {
   }
 }
 
-console.log(catAndMouse(1, 0, 2));
-
-// Desafio 8 - Crie a função fizzBuzz
-
-let numerosDoArray = [9, 25];
+//? Desafio 8 - Crie a função fizzBuzz
 
 const fizzBuzz = (parametro) => {
   let arraymodificado = [];
@@ -132,7 +112,6 @@ const fizzBuzz = (parametro) => {
   }
   return arraymodificado;
 }
-console.log(fizzBuzz(numerosDoArray))
 
 // Desafio 9 - Crie a função encode e a função decode
 
