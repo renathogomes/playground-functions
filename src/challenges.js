@@ -102,52 +102,69 @@ const fizzBuzz = (parametro) => {
 };
 
 // Desafio 9 - Crie a função encode e a função decode
-
+const frase = 'Hello'
 const encode = (string) => {
-  let arrayString = [string.split('')];
-  for (let i = 0; i < arrayString.length; i += 1) {
-    if (arrayString[i] === 'a') {
-      arrayString[i] = '1';
-      /* stringFinal.push(arrayString[i]); */
+  let novaString = []
+  let split = string.split('');
+  for (index = 0; index < split.length; index += 1)
+    if (split[index] === 'a') {
+      novaString.push(1)
+    } else if (split[index] === 'e') {
+      novaString.push(2)
+    } else if (split[index] === 'i') {
+      novaString.push(3)
+    } else if (split[index] === 'o') {
+      novaString.push(4)
+    } else if (split[index] === 'u') {
+      novaString.push(5)
+    } else {
+      novaString.push(split[index])
     }
-    if (arrayString[i] === 'e') {
-      arrayString[i] = '2';
-      /* stringFinal.push(arrayString[i]); */
-    }
-    if (arrayString[i] === 'i') {
-      arrayString[i] = '3';
-      /* stringFinal.push(arrayString[i]); */
-    }
-    if (arrayString[i] === 'o') {
-      arrayString[i] = '4';
-      /* stringFinal.push(arrayString[i]); */
-    }
-    if (arrayString[i] === 'u') {
-      arrayString[i] = '5';
-    /*   stringFinal.push(arrayString[i]); */
-    }
-  }
-  return arrayString;
-};
-console.log(encode('eu sei que vai dar errado'));
+    return novaString.join('')
+  };
 
-// Desafio 10 - Crie a função techList;
+  let fraseCodificada = encode(frase)
+
+  const decode = (fraseCodificada) => {
+    let novaString = []
+  let split = fraseCodificada.split('');
+  for (index = 0; index < fraseCodificada.length; index += 1)
+    if (fraseCodificada[index] === '1') {
+      novaString.push('a')
+    } else if (fraseCodificada[index] === '2') {
+      novaString.push('e')
+    } else if (fraseCodificada[index] === '3') {
+      novaString.push('i')
+    } else if (fraseCodificada[index] === '4') {
+      novaString.push('o')
+    } else if (fraseCodificada[index] === '5') {
+      novaString.push('u')
+    } else {
+      novaString.push(split[index])
+    }
+    return novaString.join('')
+
+  };
+
+  console.log(encode(frase))
+  console.log(decode(fraseCodificada))
+  // Desafio 10 - Crie a função techList;
 
 
-// Não modifique essas linhas;
+  // Não modifique essas linhas;
 
-module.exports = {
-  calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => { }),
-  calcRectangleArea: typeof calcRectangleArea === 'function' ? calcRectangleArea : (() => { }),
-  calcAllAreas: typeof calcAllAreas === 'function' ? calcAllAreas : (() => { }),
-  catAndMouse: typeof catAndMouse === 'function' ? catAndMouse : (() => { }),
-  compareTrue: typeof compareTrue === 'function' ? compareTrue : (() => { }),
-  concatName: typeof concatName === 'function' ? concatName : (() => { }),
-  decode: typeof decode === 'function' ? decode : (() => { }),
-  encode: typeof encode === 'function' ? encode : (() => { }),
-  fizzBuzz: typeof fizzBuzz === 'function' ? fizzBuzz : (() => { }),
-  footballPoints: typeof footballPoints === 'function' ? footballPoints : (() => { }),
-  highestCount: typeof highestCount === 'function' ? highestCount : (() => { }),
-  splitSentence: typeof splitSentence === 'function' ? splitSentence : (() => { }),
-  techList: typeof techList === 'function' ? techList : (() => { }),
-};
+  module.exports = {
+    calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => { }),
+    calcRectangleArea: typeof calcRectangleArea === 'function' ? calcRectangleArea : (() => { }),
+    calcAllAreas: typeof calcAllAreas === 'function' ? calcAllAreas : (() => { }),
+    catAndMouse: typeof catAndMouse === 'function' ? catAndMouse : (() => { }),
+    compareTrue: typeof compareTrue === 'function' ? compareTrue : (() => { }),
+    concatName: typeof concatName === 'function' ? concatName : (() => { }),
+    decode: typeof decode === 'function' ? decode : (() => { }),
+    encode: typeof encode === 'function' ? encode : (() => { }),
+    fizzBuzz: typeof fizzBuzz === 'function' ? fizzBuzz : (() => { }),
+    footballPoints: typeof footballPoints === 'function' ? footballPoints : (() => { }),
+    highestCount: typeof highestCount === 'function' ? highestCount : (() => { }),
+    splitSentence: typeof splitSentence === 'function' ? splitSentence : (() => { }),
+    techList: typeof techList === 'function' ? techList : (() => { }),
+  };
