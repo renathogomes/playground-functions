@@ -120,13 +120,13 @@ const encode = (string) => {
     } else {
       novaString.push(split[index])
     }
-    return novaString.join('')
-  };
+  return novaString.join('')
+};
 
-  let fraseCodificada = encode(frase)
+let fraseCodificada = encode(frase)
 
-  const decode = (fraseCodificada) => {
-    let novaString = []
+const decode = (fraseCodificada) => {
+  let novaString = []
   let split = fraseCodificada.split('');
   for (index = 0; index < fraseCodificada.length; index += 1)
     if (fraseCodificada[index] === '1') {
@@ -142,29 +142,115 @@ const encode = (string) => {
     } else {
       novaString.push(split[index])
     }
-    return novaString.join('')
+  return novaString.join('')
 
-  };
+};
 
-  console.log(encode(frase))
-  console.log(decode(fraseCodificada))
-  // Desafio 10 - Crie a função techList;
+// Desafio 10 - Crie a função techList;
+
+const techList = (arrayTech, stringNome) => {
+  let array = [];
+  arrayTech.sort()
+  for (let index = 0; index < arrayTech.length; index += 1) {
+    array.push({
+      tech: arrayTech[index],
+      name: stringNome
+    })
+  }
+  return array
+}
+
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'))
 
 
-  // Não modifique essas linhas;
+// Não modifique essas linhas;
 
-  module.exports = {
-    calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => { }),
-    calcRectangleArea: typeof calcRectangleArea === 'function' ? calcRectangleArea : (() => { }),
-    calcAllAreas: typeof calcAllAreas === 'function' ? calcAllAreas : (() => { }),
-    catAndMouse: typeof catAndMouse === 'function' ? catAndMouse : (() => { }),
-    compareTrue: typeof compareTrue === 'function' ? compareTrue : (() => { }),
-    concatName: typeof concatName === 'function' ? concatName : (() => { }),
-    decode: typeof decode === 'function' ? decode : (() => { }),
-    encode: typeof encode === 'function' ? encode : (() => { }),
-    fizzBuzz: typeof fizzBuzz === 'function' ? fizzBuzz : (() => { }),
-    footballPoints: typeof footballPoints === 'function' ? footballPoints : (() => { }),
-    highestCount: typeof highestCount === 'function' ? highestCount : (() => { }),
-    splitSentence: typeof splitSentence === 'function' ? splitSentence : (() => { }),
-    techList: typeof techList === 'function' ? techList : (() => { }),
-  };
+module.exports = {
+  calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => { }),
+  calcRectangleArea: typeof calcRectangleArea === 'function' ? calcRectangleArea : (() => { }),
+  calcAllAreas: typeof calcAllAreas === 'function' ? calcAllAreas : (() => { }),
+  catAndMouse: typeof catAndMouse === 'function' ? catAndMouse : (() => { }),
+  compareTrue: typeof compareTrue === 'function' ? compareTrue : (() => { }),
+  concatName: typeof concatName === 'function' ? concatName : (() => { }),
+  decode: typeof decode === 'function' ? decode : (() => { }),
+  encode: typeof encode === 'function' ? encode : (() => { }),
+  fizzBuzz: typeof fizzBuzz === 'function' ? fizzBuzz : (() => { }),
+  footballPoints: typeof footballPoints === 'function' ? footballPoints : (() => { }),
+  highestCount: typeof highestCount === 'function' ? highestCount : (() => { }),
+  splitSentence: typeof splitSentence === 'function' ? splitSentence : (() => { }),
+  techList: typeof techList === 'function' ? techList : (() => { }),
+};
+
+// Desafio 11 - Crie a função generatePhoneNumber;
+/* 
+const generatePhoneNumber = (numeros) => {
+    numeros.length === 11 ? `(${numeros[0]})`
+
+}
+
+console.log(generatePhoneNumber(1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1)) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* const api = [{
+  cor: 'branca',
+  marca: 'fiat',
+  placa: 23,
+  objeto2: {
+    nome: 'renatho',
+    idade: 31
+  }
+},
+{
+  cor: 'branca',
+  marca: 'fiat',
+  placa: 23,
+  objeto2: {
+    nome: 'renatho',
+    idade: 31
+  }
+},
+{
+  cor: 'verde',
+  marca: 'fiat',
+  placa: 23,
+  objeto2: {
+    nome: 'renatho',
+    idade: 31
+  }
+}
+]
+
+console.log(api[1].objeto2.nome = 'affonso')
+console.log(api)
+ */
+/* 
+let myObject = {
+  name: "John", 
+  skillItem1: 4,
+  skillItem2: 7,
+  skillItem3: 2,
+  skillItem4: 1
+}
+
+// Updates `skillItem2` to 15
+console.log(myObject['skillItem2'] = 15); */
